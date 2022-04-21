@@ -30,6 +30,9 @@
             placeholder=""
           />
         </div>
+        <div class="button-group">
+          <button type="button" class="btn btn-info" @click="getCode">Get</button>
+        </div>
       </div>
       <div class="col-8">
         <div class="mb-3">
@@ -52,7 +55,8 @@ export default {
       cbx_command: "",
       cmds: [
         { id: 1, name: "Route" },
-        { id: 2, name: "Route Link" },
+        { id: 2, name: "View" },
+        { id: 3, name: "Route Link" },
       ],
     };
   },
@@ -75,10 +79,34 @@ export default {
             \rcomponent: ${this.tbl_cap}View,
          \r },
         `;
-      } else if (this.cbx_command == 2) {
-        this.code = `
+      } 
+      else if (this.cbx_command == 2) {
+        this.code = `<template></template>
+          
+          export default {
+            components: {},
+            data() {},
+            methods: {
+              get: async function () {
+                this.posts = await getAll();
+              },
+            },
+            mounted() {
+            
+            },
+          };
+
+
+          <style scoped>
+          .nav-btn {
+            cursor: pointer !important;
+          }
+          </style>
         `;
       }
+    },
+    getCode() {
+      this.code=this.code.replaceAll('\n','\\n')
     },
     e() {},
   },

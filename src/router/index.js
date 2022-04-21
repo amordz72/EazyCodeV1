@@ -3,6 +3,9 @@ import HomeView from "../views/HomeView.vue";
 import AuthView from "../views/AuthView.vue";
 import PostView from "../views/PostView.vue";
 import EazyCodeView from "../views/EazyCodeView.vue";
+import PostApiView from "../views/PostApiView.vue";
+
+
 
 const routes = [
   {
@@ -28,6 +31,15 @@ const routes = [
     component: EazyCodeView,
  
   },
+{
+            
+path: "/postApi",
+            
+name: "PostApiView",
+            
+component: PostApiView,
+         
+ },
 ];
 
 const router = createRouter({
