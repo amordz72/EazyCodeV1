@@ -23,7 +23,7 @@ const routes = [
     
   },
   {
-    path: "/eazy",
+    path: "/EazyCode",
     name: "EazyCodeView",
     component: EazyCodeView,
  

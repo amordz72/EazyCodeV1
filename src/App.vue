@@ -1,25 +1,19 @@
 <template>
   <div class="container-fluid">
-     
-<NavbarVue></NavbarVue>
-   <router-view />
-    
-     
-  
-    </div>
-  
+    <NavbarVue></NavbarVue>
+    <router-view />
+  </div>
 </template>
 
 
 
 <script>
-import NavbarVue from './components/Navbar.vue';
- 
+import NavbarVue from "./components/Navbar.vue";
 
 export default {
- components:{
-NavbarVue
- }
+  components: {
+    NavbarVue,
+  },
 };
 </script>
  
