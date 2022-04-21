@@ -56,8 +56,8 @@ nav a.router-link-exact-active {
 }
 
 @media only screen and (max-width: 768px) {
-  .sidebar {
-    width: 0 !important;
+  .sidebar-sm {
+    width: 70px !important;
   }
 }
 </style>
