@@ -36,8 +36,8 @@
       </div>
       <div class="col-8">
         <div class="mb-3">
-          <label for="" class="form-label">Code</label>
-          <textarea class="form-control" v-model="code" rows="11"></textarea>
+          <label for="" class="form-label h4">Code :</label>
+          <textarea class="form-control fw-bold" v-model="code" rows="11"></textarea>
         </div>
       </div>
     </div>
@@ -103,6 +103,11 @@ export default {
           }
           </style>
         `;
+      }
+      else if (this.cbx_command == 3) {
+        this.code = 
+        `<li>\n <router-link class="dropdown-item" to="/${this.txt_tbl}" v-if="!isLogin">${this.tbl_cap}</router-link>\n</li>`;
+        
       }
     },
     getCode() {

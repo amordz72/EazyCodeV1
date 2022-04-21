@@ -20,8 +20,10 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link class="dropdown-item" to="/posts" v-if="isLogin">Posts</router-link>
-                <router-link class="dropdown-item" to="/eazyCode" v-if="isLogin">EazyCode</router-link>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <router-link class="dropdown-item" to="/postApi" v-if="isLogin">PostApi</router-link>
+                 <router-link class="dropdown-item" to="/eazyCode" v-if="isLogin">EazyCode</router-link>
+               
+               
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
