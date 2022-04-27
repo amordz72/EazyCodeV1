@@ -1,0 +1,3 @@
+cd ..
+firebase deploy
+pause

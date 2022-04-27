@@ -17,27 +17,30 @@ const db = getFirestore(app);
 const tableName = 'posts';
 
 
-export async function add_post(obj) {
+export async function add(obj) {
 
     const postRef = await addDoc(collection(db, tableName), {
         ...obj
     });
 
- 
+    if (postRef)
+        return true
+    else
+        return false
 
 }
 
-export async function update_post(id, obj) {
+export async function update(id, obj) {
 
     const postRef = doc(db, tableName, id);
     await updateDoc(postRef, {
         ...obj
-    })  
+    })
 
-    
+
 
 }
-export async function del_post(id) {
+export async function del(id) {
 
     const result = await deleteDoc(doc(db, tableName, id));
     if (result) {
@@ -48,7 +51,7 @@ export async function del_post(id) {
 
 }
 
-export async function getAll() {
+export async function all() {
 
     const result = []
 
@@ -73,14 +76,14 @@ export async function getAll() {
 }
 
 
-export async function get_by_id(id) {
+export async function get(id) {
     const docRef = doc(db, tableName, id);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
         return docSnap.data();
     } else {
-        // doc.data() will be undefined in this case
+
         return false
     }
 
