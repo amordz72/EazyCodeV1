@@ -12,6 +12,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
+           
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -21,6 +22,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link class="dropdown-item" to="/posts" v-if="isLogin">Posts</router-link>
                  <router-link class="dropdown-item" to="/postApi" v-if="isLogin">PostApi</router-link>
+                 <router-link class="dropdown-item" to='/DayneView'>DayneApi</router-link>
                  <router-link class="dropdown-item" to="/eazyCode" v-if="isLogin">EazyCode</router-link>
                
                

@@ -10,10 +10,13 @@
 <script>
 import NavbarVue from "./components/Navbar.vue";
 
+document.querySelector('title').text="Dayne - ";
 export default {
-  components: {
+
+    components: {
     NavbarVue,
   },
+  
 };
 </script>
  

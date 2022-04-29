@@ -2,12 +2,14 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCtq7FgHFRPYeesnjvrjXhaCDiVaSnOk6s",
-  authDomain: "my-app-40d80.firebaseapp.com",
-  projectId: "my-app-40d80",
-  storageBucket: "my-app-40d80.appspot.com",
-  messagingSenderId: "456846608917",
-  appId: "1:456846608917:web:123fef528a67c8279e1c1c"
+  apiKey: "AIzaSyBbzHmINFZOKrX66HPFs5y7torT0Vn8f8A",
+  authDomain: "dayne-v1.firebaseapp.com",
+  databaseURL: "https://dayne-v1-default-rtdb.firebaseio.com",
+  projectId: "dayne-v1",
+  storageBucket: "dayne-v1.appspot.com",
+  messagingSenderId: "326745985993",
+  appId: "1:326745985993:web:73003bc390c1f4b3e58e18",
+  measurementId: "G-NDQQZMF0B8"
 };
 
 // Initialize Firebase
